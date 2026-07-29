@@ -1,0 +1,19 @@
+-- Create the Vehicle table
+CREATE TABLE Vehicle (
+    vehicle_no VARCHAR(20) PRIMARY KEY,
+    owner VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    registered_date DATE NOT NULL
+);
+
+-- Insert five sample records
+INSERT INTO Vehicle (vehicle_no, owner, price, registered_date)
+VALUES
+('CAR-1001', 'John Smith', 25000.00, '2022-01-15'),
+('CAR-1002', 'Alice Brown', 32000.50, '2021-07-22'),
+('CAR-1003', 'Michael Johnson', 18500.75, '2023-03-10'),
+('CAR-1004', 'Sarah Davis', 41000.00, '2020-11-05'),
+('CAR-1005', 'David Wilson', 27500.25, '2024-06-18');
+
+-- Verify the inserted records
+SELECT * FROM Vehicle;
